@@ -1,0 +1,42 @@
+<template>
+	<lightning-card>
+
+		<div>
+			<h1 class="slds-text-heading_large">
+				Olá Mundo!
+			</h1>
+			<p>Termina logo porem nao.</p>
+			<br>
+		</div>
+
+		<div class="slds-m-around_medium" if:true={visible}>
+			<h1 class="slds-text-heading_medium">Trazer dados da Classe</h1>
+			<p>Nome: {name}</p>
+			<p>Telefone: {telefone}</p>
+			<p>Cpf: {cpf} </p>
+			<p>Idade: {idade} </p>
+		</div>
+
+		<div class="slds-m-around_medium" if:false={visible}>
+			<h1>Outros Dados</h1>
+			<p>Email: {email}</p>
+			<p>Instagram:
+				<a href={instagram} target="_blanck">clique aqui</a>
+			</p>
+			<p>Linkedin:
+				<a href={linkedin} target="_blanck">clique aqui</a>
+			</p>
+
+		</div>
+
+		<lightning-button variant="brand" label="Trocar Div" title="Alterar visible" onclick={trocarDiv}
+			class="slds-m-left_x-small">
+		</lightning-button>
+		<br>
+		<br>
+		<lightning-button variant="brand" label="Alterar valor" title="Alterar valores" onclick={alterarValores}
+			class="slds-m-left_x-small">
+		</lightning-button>
+
+	</lightning-card>
+</template>
